@@ -1,13 +1,17 @@
 import style from "./nav.module.scss";
+import { useDispatch } from "react-redux";
+import { chagevalue } from "../../store/slice/popupSlice";
 import { Link } from "react-router-dom";
-import logo_berger from "../../assets/menu.png";
+
 function Nav() {
+  const dispatch = useDispatch();
   return (
     <>
       <nav className={style.nav}>
         <div className={style.logo}>
           <p>Fares Kerkeni</p>
         </div>
+
         <div className={style.lien}>
           <ul>
             <li>
@@ -21,7 +25,7 @@ function Nav() {
           </ul>
           <ul>
             <li>
-              <Link to="/situation_pro">Situation Professionel</Link>
+              <Link to="/situations_pro">Situation Professionel</Link>
             </li>
           </ul>
           <ul>
@@ -34,9 +38,12 @@ function Nav() {
               <Link to="/veille_technologique">veille technologique</Link>
             </li>
           </ul>
-        </div>
-        <div className={style.logo_berger}>
-          <img src={logo_berger} alt="" />
+          <button
+            onClick={() => dispatch(chagevalue())}
+            className={style.button}
+          >
+            MENU
+          </button>
         </div>
       </nav>
     </>
