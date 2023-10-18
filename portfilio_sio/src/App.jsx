@@ -6,24 +6,16 @@ import { motion } from "framer-motion";
 import Nav from "./components/nav/nav";
 import { Link } from "react-router-dom";
 import "animate.css";
+import img_moi from "./assets/moi.png";
 function App() {
   const count = useSelector((state) => state.popup.value); // Correction ici
-  const maDiv = document.querySelector(".container_app");
   const couleur = useSelector((state) => state.changecolors.couleur); // Correction ici
   const dispatch = useDispatch();
   const handleButtonClick = () => {
     dispatch(chagecouleur());
     dispatch(chagevalue());
   };
-  function ajouterClasseAuScroll() {
-    if (window.scrollY > 100) {
-      // Modifiez cette valeur selon votre besoin
-      maDiv.classList.add("scroll");
-    } else {
-      maDiv.classList.remove("scroll");
-    }
-  }
-  window.addEventListener("scroll", ajouterClasseAuScroll);
+
   return (
     console.log(couleur),
     (
@@ -84,8 +76,34 @@ function App() {
           <div className={style.container_app}>
             <Nav />
             <div className={style.container_home}>
-              <div className={style.section1}></div>
-              <div className={style.section2}></div>
+              <div className={style.section1}>
+                <div className={style.container_header}>
+                  <div className={style.container_name}>
+                    <p>KERKENI</p>
+                    <p>FARES</p>
+                  </div>
+                  <div className={style.container_description}>
+                    <div className={style.description_img}>
+                      <div className={style.img}>
+                        <img src={img_moi} alt="" />
+                      </div>
+                      <div className={style.description}>
+                        <div className={style.title}>
+                          Front-End React developer
+                        </div>
+                        <div className={style.contenue}>
+                          Hi, i'm Fares Kerkeni A passionate Front-End React
+                          developer from Paris.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={style.section2}>
+                <div className={style.title}>Explore my work</div>
+                <div></div>
+              </div>
             </div>
           </div>
         )}
