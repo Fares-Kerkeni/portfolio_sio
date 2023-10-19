@@ -89,6 +89,141 @@
     .section2 {
       width: 100%;
       height: 100vh;
+      .container_works {
+        width: 100%;
+        height: calc(100vh - 200px);
+
+        .container_project {
+          width: 100%;
+          height: 500px;
+          display: flex;
+
+          margin-bottom: 25px;
+          .container_project1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            .container_link {
+              height: 100%;
+              width: 500px;
+              border-radius: 25px;
+              border: solid 1px black;
+              margin-right: 25px;
+              border: solid 1px black;
+              color: white;
+              background-color: black;
+            }
+            .container_img {
+              width: calc(100% - 525px);
+              height: 100%;
+
+              border-radius: 25px;
+
+              .coiffeur {
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                object-fit: cover;
+              }
+            }
+          }
+          .container_project2 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            .button_all_woks {
+              height: 100%;
+              width: 600px;
+              font-size: 30px;
+              margin-right: 25px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              a {
+                display: block;
+
+                width: 500px;
+                height: 500px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #d0f467;
+              }
+              a:hover .img_fleche {
+                transform: rotate(0deg);
+              }
+              .link_text {
+                display: flex;
+                flex-direction: column;
+
+                .img_fleche {
+                  width: 60px;
+                  height: 60px;
+                  margin-top: 25px;
+                  transform: rotate(-30deg);
+                }
+              }
+            }
+
+            .container_img_link {
+              width: 100%;
+              height: 100%;
+              border-radius: 25px;
+
+              display: flex;
+
+              .link {
+                height: 100%;
+                width: 500px;
+                border-radius: 25px;
+                color: white;
+                background-color: black;
+              }
+              .img {
+                width: calc(100% - 525px);
+                height: 100%;
+
+                border-radius: 25px;
+                margin-right: 25px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 25px;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+          .container_project3 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 25px;
+            .link {
+              width: 800px;
+              height: 100%;
+              border: solid 1px black;
+              border-radius: 25px;
+              margin-right: 25px;
+              background-color: black;
+              color: white;
+            }
+            .img {
+              width: calc(100% - 825px);
+              height: 100%;
+              border-radius: 25px;
+
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
 
       .title {
         width: 100%;

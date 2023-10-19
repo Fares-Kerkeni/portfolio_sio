@@ -7,6 +7,10 @@ import Nav from "./components/nav/nav";
 import { Link } from "react-router-dom";
 import "animate.css";
 import img_moi from "./assets/moi.png";
+import coiffeur from "./assets/coiffeur.png";
+import flag from "./assets/flag.png";
+// import plante from "./assets/plante.png";
+import fleche_droite from "./assets/fleche_droite.png";
 function App() {
   const count = useSelector((state) => state.popup.value); // Correction ici
   const couleur = useSelector((state) => state.changecolors.couleur); // Correction ici
@@ -101,8 +105,48 @@ function App() {
                 </div>
               </div>
               <div className={style.section2}>
-                <div className={style.title}>Explore my work</div>
-                <div></div>
+                <div className={style.title}>Explore my works</div>
+                <div className={style.container_works}>
+                  <div className={style.container_project}>
+                    <div className={style.container_project1}>
+                      <div className={style.container_link}>
+                        <div className={style.title}></div>
+                      </div>
+                      <div className={style.container_img}>
+                        <img src={coiffeur} alt="" className={style.coiffeur} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={style.container_project}>
+                    <div className={style.container_project2}>
+                      <div className={style.button_all_woks}>
+                        <Link to="/parcours" className={style.link_text}>
+                          <p>Lets Go in</p>
+                          <p>The All Works</p>
+                          <img
+                            src={fleche_droite}
+                            className={style.img_fleche}
+                            alt=""
+                          />
+                        </Link>
+                      </div>
+                      <div className={style.container_img_link}>
+                        <div className={style.img}>
+                          <img src={flag} alt="" />
+                        </div>
+                        <div className={style.link}></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={style.container_project}>
+                    <div className={style.container_project3}>
+                      <div className={style.link}></div>
+                      <div className={style.img}>
+                        <img src={coiffeur} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
